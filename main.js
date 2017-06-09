@@ -1,14 +1,25 @@
-console.log('hello');
-
 let treeProperties = {
 	height: 8,
 	character: "&"
 };
 
-// console.log('treeProperties', treeProperties);
 function numCharactersPerLine(i) {
-	let characterPerLine = (1 + i);
-	return characterPerLine
+	let numCharacters = (1 + (2 * i));
+	return numCharacters;
+}
+
+function numSpacesPerLine(i) {
+	let spacesEachSide = 
+	(treeProperties.height - 1 - i);
+	return spacesEachSide;
+}
+
+function buildSpaceString(j) {
+	let spaceString = "";
+	for (var i = 0; i < numSpacesPerLine(j); i++) {
+		spaceString += " ";
+	}
+	return spaceString;
 }
 
 function buildCharacterString(j) {
@@ -19,18 +30,9 @@ function buildCharacterString(j) {
 	return characterString;
 }
 
-// let middleDisplay = buildCharacterString(i);
-// console.log(middleDisplay);
-
 function buildTree() {
 	for (var i = 0; i < treeProperties.height; i++) {
-		console.log(buildCharacterString(i));
+		console.log(buildSpaceString(i), buildCharacterString(i));
 	}
 }
 buildTree();
-
-// function displayLineOfTree() {
-// 	console.log(middleDisplay);
-// }
-
-// displayLineOfTree();
