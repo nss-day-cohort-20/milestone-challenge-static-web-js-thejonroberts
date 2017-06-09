@@ -1,11 +1,20 @@
 let userHeight = document.getElementById("treeHeight");
 let userCharacter = document.getElementById("treeCharacter");
-
+let growButton = document.getElementById("growButton");
+console.log('userHeight', userHeight);
+console.log('userCharacter', userCharacter);
+console.log('growButton', growButton);
 
 let treeProperties = {
 	height: 8,
 	character: "&"
 };
+
+growButton.addEventListener("submit", function() {
+	treeProperties.height = userHeight.value;
+	treeProperties.character = userCharacter.value;
+	buildTree();
+})
 
 function numCharactersPerLine(i) {
 	let numCharacters = (1 + (2 * i));
@@ -39,4 +48,3 @@ function buildTree() {
 		console.log(buildSpaceString(i), buildCharacterString(i));
 	}
 }
-buildTree();
