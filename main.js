@@ -19,7 +19,7 @@ function inputFieldCheck() {
 	if ((treeProperties.height === "null") || (treeProperties.height === "" )) {
 		alert("Please enter a number for the tree height");
 	} else if (treeProperties.height < 1){
-			alert("Please enter a positive integer.  Our trees can only grow up.");
+			alert("Please enter a positive integer (1, 2, 3, ...).  Our trees can only grow up.");
 			userCharacter.value = null;
 		} else if((treeProperties.character == "null") || (treeProperties.character == "" )) {
 				alert("Please enter a character for your tree");
