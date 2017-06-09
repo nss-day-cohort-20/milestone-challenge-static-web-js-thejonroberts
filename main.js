@@ -11,7 +11,7 @@ growButton.addEventListener("click", function() {
 	treeProperties.height = userHeight.value;
 	treeProperties.character = userCharacter.value;
 	if (inputFieldCheck() && lopsidedCheck()) {
-		tree();
+		tree(treeProperties);
 	}
 })
 //check that the user has entered values in both fields
@@ -56,16 +56,16 @@ function buildSpaceString(j) {
 	}
 	return spaceString;
 }
-function buildCharacterString(j) {
+function buildCharacterString(j, char) {
 	let characterString = "";
 	for (var i = 0; i < numCharactersPerLine(j); i++) {
-		characterString += treeProperties.character;
+		characterString += char;
 	}
 	return characterString;
 }
 //output each line to console until height reached.
-function tree() {
-	for (var i = 0; i < treeProperties.height; i++) {
-		console.log(buildSpaceString(i), buildCharacterString(i));
+function tree(treeObject) {
+	for (var i = 0; i < treeObject.height; i++) {
+		console.log(buildSpaceString(i), buildCharacterString(i, treeObject.character));
 	}
 }
