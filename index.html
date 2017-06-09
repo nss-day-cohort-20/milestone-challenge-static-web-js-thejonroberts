@@ -5,12 +5,16 @@
 </head>
 <body>
 
-<form id="treeProperties" action="javascript.void()">
-<label for="treeHieght">Please enter the height of your tree:</label>
-<input type="number" name="treeHieght" id="treeHieght">
-<label>Please enter the character you wish to use:</label>
-<input type="text" name="treeCharacter" id="treeCharacter">
-<input type="submit" name="">	
+<form action="Javascript:void(0)" method="post">
+
+	<p><label for="treeHieght">Please enter the line height of your tree:</label></p>
+	<input type="number" name="treeHieght" id="treeHeight"><span> lines</span>
+
+	<p><label>Please enter the character you wish to use:</label></p>
+	<input type="text" name="treeCharacter" id="treeCharacter">
+
+	<p><input type="submit" name="growButton" id="growButton" value="Grow a Tree"></p>
+
 </form>
 
 <script src="main.js"></script>

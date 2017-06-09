@@ -1,3 +1,7 @@
+let userHeight = document.getElementById("treeHeight");
+let userCharacter = document.getElementById("treeCharacter");
+
+
 let treeProperties = {
 	height: 8,
 	character: "&"
