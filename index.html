@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Plant a Console Tree</title>
-</head>
-<body>
+	<head>
+		<title>Plant a Console Tree</title>
+	</head>
+	<body>
+		<form action="Javascript:void(0)" method="post">
+			<p><label for="treeHieght">Please enter the line height of your tree:</label></p>
+			<input type="number" name="treeHieght" id="treeHeight"><span> lines</span>
 
-<form action="Javascript:void(0)" method="post">
+			<p><label>Please enter the character you wish to use:</label></p>
+			<input type="text" name="treeCharacter" id="treeCharacter">
 
-	<p><label for="treeHieght">Please enter the line height of your tree:</label></p>
-	<input type="number" name="treeHieght" id="treeHeight"><span> lines</span>
-
-	<p><label>Please enter the character you wish to use:</label></p>
-	<input type="text" name="treeCharacter" id="treeCharacter">
-
-	<p><input type="submit" name="growButton" id="growButton" value="Grow a Tree"></p>
-
-</form>
-
-<script src="main.js"></script>
-</body>
+			<p><input type="submit" name="growButton" id="growButton" value="Grow a Tree"></p>
+		</form>
+	<script src="main.js"></script>
+	</body>
 </html>
